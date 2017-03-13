@@ -13,14 +13,17 @@ irfanRoute.config(['$routeProvider', function($routeProvider) {
         .when("/", {
             redirectTo: 'red'
         })
-        .when("/#red", {
+        .when("/red", {
             templateUrl : "route/red.html"
         })
-        .when("/#green", {
+        .when("/green", {
             templateUrl : "route/green.html"
         })
-        .when("/#blue", {
+        .when("/blue", {
             templateUrl : "route/blue.html"
+        })
+        .otherwise({
+            template : "<h1>Cannot found routing</h1> <p>Nothing has been selected</p>"
         });
         
 }]);

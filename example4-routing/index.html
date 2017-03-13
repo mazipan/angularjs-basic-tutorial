@@ -5,6 +5,9 @@
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+	    <base href="https://mazipan.github.io/angularjs-basic-tutorial/example4-routing/">
+
 	</head>
 
 	<body ng-app="irfan.basic.Application" ng-controller="irfan.ctrl" class="container">
@@ -15,14 +18,14 @@
 	    <div class="row">
 
 	        <ul class="nav nav-tabs">
-	            <li>
-	                <a href="#red">Red</a>
+	            <li ng-class="{'active': tabActive === 'red'}">
+	                <a href="#!/red">Red</a>
 	            </li>
-	            <li>
-	                <a href="#green">Green</a>
+	            <li ng-class="{'active': tabActive === 'green'}">
+	                <a href="#!/green">Green</a>
 	            </li>
-	            <li>
-	                <a href="#blue">Blue</a>
+	            <li ng-class="{'active': tabActive === 'blue'}">
+	                <a href="#!/blue">Blue</a>
 	            </li>
 	        </ul>
 	    </div>
@@ -36,6 +39,7 @@
 	    <script src="Application.js"></script>
 	    <script src="AppController.js"></script>
 	    <script src="AppRoute.js"></script>
+	    <script src="AppService.js"></script>
 	</body>
 
 </html>

@@ -3,19 +3,23 @@
  */
 var irfanRoute = angular.module('irfan.basic.route', ["ngRoute"]);
 
+irfanRoute.run(['$route', function($route)  {
+    $route.reload();
+}]);
+
 irfanRoute.config(['$routeProvider', function($routeProvider) {
     
     $routeProvider
         .when("/", {
-            templateUrl : "route/main.html"
+            redirectTo: 'red'
         })
-        .when("/red", {
+        .when("/#red", {
             templateUrl : "route/red.html"
         })
-        .when("/green", {
+        .when("/#green", {
             templateUrl : "route/green.html"
         })
-        .when("/blue", {
+        .when("/#blue", {
             templateUrl : "route/blue.html"
         });
         

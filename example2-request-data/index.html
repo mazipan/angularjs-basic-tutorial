@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+
+	<body ng-app="irfan.basic.Application" 
+		  ng-controller="irfan.ctrl" class="container">
+
+		<br/>  
+		<div class="row">	  
+		  <button ng-click="fetchData()" class="btn btn-primary">
+		  <i class="glyphicon glyphicon-refresh"></i>
+		  Fetch Data
+		  </button>
+		</div>
+
+		<div class="row">	  
+		  <table class="table">
+		  	<thead>
+		  		<tr>
+		  			<th>Title</th>
+		  			<th>Director</th>
+		  			<th>Released</th>
+		  		</tr>
+		  	</thead>
+		  	<tbody>
+		  		<tr ng-repeat="d in data.results track by d.episode_id">
+		  			<td>{{d.title}}</td>
+		  			<td>{{d.director}}</td>
+		  			<td>{{d.release_date | date : 'yyyy-MMM-dd'}}</td>
+		  		</tr>
+		  	</tbody>
+		  </table>
+		</div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+		<script src="Application.js"></script>
+		<script src="AppController.js"></script>
+	</body>
+
+</html>
+
+

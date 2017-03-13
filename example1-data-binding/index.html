@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	</head>
+
+	<body ng-app="irfan.basic.Application" 
+		  ng-controller="irfan.ctrl">
+
+		<div class="row">	  
+		  <input type="text" placeholder="firstname" ng-model="firstName">
+		  <input type="text" placeholder="lastname" ng-model="lastName">
+		  <button ng-click="seeFullName()">See my Full Name</button>
+
+		  <h1>{{fullName}}</h1>
+		</div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+		<script src="Application.js"></script>
+		<script src="AppController.js"></script>
+	</body>
+
+</html>
+
+

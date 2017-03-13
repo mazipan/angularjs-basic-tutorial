@@ -1,52 +1,39 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	</head>
 
-	<body ng-app="irfan.basic.Application"  class="container">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
 
-
-	      <h1>Angular Service Example</h1>
-		  <a href="https://github.com/mazipan/angularjs-basic-tutorial">See source code</a>
-
-		  <div class="row" ng-controller="irfan.ctrl">	  
-		  		<h2>Controller 1</h2>
-				  <input type="text" placeholder="firstname" class="form-control" ng-model="firstName">
-				  <input type="text" placeholder="lastname" class="form-control" ng-model="lastName">
-
-				  <button ng-click="syncData()" class="btn btn-primary">
-					  <i class="glyphicon glyphicon-refresh"></i>
-					  Sync Data
-				  </button>
-
-
-				  <h3>firstName : {{firstName}}</h3>
-				  <h3>lastName  : {{lastName}}</h3>
-				  <h3>fullName  : {{fullName}}</h3>
-
-		  </div>
-
-		  <div class="row" ng-controller="irfan.other.ctrl">	  
-		  		<h2>Controller 2</h2>
-
-				  <h3>firstName : {{firstName}}</h3>
-				  <h3>lastName  : {{lastName}}</h3>
-				  <h3>fullName  : {{fullName}}</h3>
-
-		  </div>
-
-		
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
-		<script src="Application.js"></script>
-		<script src="AppService.js"></script>
-		<script src="AppController.js"></script>
-		<script src="AppControllerOther.js"></script>
-	</body>
+<body ng-app="irfan.basic.Application" class="container">
+    <h1>Angular Service Example</h1>
+    <a href="https://github.com/mazipan/angularjs-basic-tutorial">See source code</a>
+    <br/>
+    <br/>
+    <div class="row" ng-controller="irfan.ctrl">
+        <h2>Controller 1</h2>
+        <input type="text" placeholder="firstname" class="form-control" ng-model="firstName">
+        <input type="text" placeholder="lastname" class="form-control" ng-model="lastName">
+        <button ng-click="syncData()" class="btn btn-primary">
+            <i class="glyphicon glyphicon-refresh"></i> Sync Data
+        </button>
+        <h3>firstName : {{firstName}}</h3>
+        <h3>lastName  : {{lastName}}</h3>
+        <h3>fullName  : {{fullName}}</h3>
+    </div>
+    <div class="row" ng-controller="irfan.other.ctrl">
+        <h2>Controller 2</h2>
+        <h3>firstName : {{firstName}}</h3>
+        <h3>lastName  : {{lastName}}</h3>
+        <h3>fullName  : {{fullName}}</h3>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
+    <script src="Application.js"></script>
+    <script src="AppService.js"></script>
+    <script src="AppController.js"></script>
+    <script src="AppControllerOther.js"></script>
+</body>
 
 </html>
-
-

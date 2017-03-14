@@ -13,13 +13,13 @@
     <br/>
     <img src="https://raw.githubusercontent.com/mazipan/angularjs-basic-tutorial/master/angular.png"/>
     <div class="row">
-        <input type="text" class="form-control" placeholder="firstname" ng-model="firstName">
-        <input type="text" class="form-control" placeholder="lastname" ng-model="lastName">
+        <input type="text" class="form-control" placeholder="firstname" ng-model="firstName" ng-change="seeFullName()">
+        <input type="text" class="form-control" placeholder="lastname" ng-model="lastName" ng-change="seeFullName()">
         <button ng-click="seeFullName()" class="btn btn-primary">
             <i class="glyphicon glyphicon-send"></i> See my Full Name
         </button>
         
-        <h1>Fullname : {{fullName}}</h1>
+        <h1>Fullname : <span ng-bind="fullName"></span></h1>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>

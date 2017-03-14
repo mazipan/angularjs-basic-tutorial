@@ -1,4 +1,4 @@
-/*
+s/*
  * @author : irfan.maulana
  */
 var irfanRoute = angular.module('irfan.basic.route', ["ngRoute"]);

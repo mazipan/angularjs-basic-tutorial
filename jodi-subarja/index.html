@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body ng-app="Application" ng-controller="cltr.App" class="container">
+    <h1 style="color: #6600CC;">StarWarsAPI</h1>
+    <br/>
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li ng-class="{'active': tabActive === 'People'}">
+                    <a href="#!/People">People</a>
+                </li>
+                <li ng-class="{'active': tabActive === 'Vehicle'}">
+                    <a href="#!/Vehicle">Vehicle</a>
+                </li>
+            </ul>
+        </div>
+        
+    <!--data not found sejak routing-->
+    <!-- kemungkinan kesalahan path -->
+
+    <!-- next cek -->
+    <!-- cek routeApp->cek path->cek index.html->cek route folder -->
+
+     <ng-view></ng-view>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-route.min.js"></script>
+    <script src="Application.js"></script>
+    <script src="AppController.js"></script>
+    <script src="AppRoute.js"></script>
+    <script src="AppService.js"></script>
+
+     <script type="text/ng-template" id="People.html">
+         <div ng-app="Application" ng-controller="cltr.App">
+        <!--kalo dipencet bakal ngejalanin fungsi buat ambil data-->
+            <button ng-click="fetchDataPeople()" class="btn btn-primary">Get Data</button>
+        </div>
+
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Height</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in data.results track by d.created">
+                        <td>{{d.name}}</td>
+                        <td>{{d.height}}</td>
+                        <td>{{d.gender}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+     </script>
+
+     <script type="text/ng-template" id="Vehicle.html">
+         <div ng-app="Application" ng-controller="cltr.App">
+        <!--kalo dipencet bakal ngejalanin fungsi buat ambil data-->
+            <button ng-click="fetchDataVehicle()" class="btn btn-primary">Get Data</button>
+        </div>
+
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Model</th>
+                        <th>Passenger</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in data.results track by d.model">
+                        <td>{{d.name}}</td>
+                        <td>{{d.model}}</td>
+                        <td>{{d.passengers}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+     </script>
+</html>

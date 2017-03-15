@@ -1,0 +1,36 @@
+<table class="table" >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Manufacturer</th>
+            <th>Cost (in credit)</th>
+            <th>Length</th>
+            <th>Max Atmosphering Speed</th>
+            <th>Crew</th>
+            <th>Passengers</th>
+            <th>Cargo Capacity</th>
+            <th>Consumables</th>
+            <th>Hyperdrive Rating</th>
+            <th>MGLT</th>
+            <th>Starship Class</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="spaceship in dataSpaceship.results track by spaceship.name">
+            <td>{{spaceship.name}}</td>
+            <td>{{spaceship.model}}</td>
+            <td>{{spaceship.manufacturer}}</td>
+            <td>{{spaceship.cost_in_credits}}</td>
+            <td>{{spaceship.length}}</td>
+            <td>{{spaceship.max_atmosperhing_speed}}</td>
+            <td>{{spaceship.crew}}</td>
+            <td>{{spaceship.passengers}}</td>
+            <td>{{spaceship.cargo_capacity}}</td>
+            <td>{{spaceship.consumables}}</td>
+            <td>{{spaceship.hyperdrive_rating}}</td>
+            <td>{{spaceship.MGLT}}</td>
+            <td>{{spaceship.starship_class}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Simple Starwars Information</title>
+    <style type="text/css">
+        body
+        {
+            background: url("http://wallpapercave.com/wp/ItmVuT6.jpg");
+            color: white;
+        }
+        a
+        {
+            color: white;
+        }
+        a:hover
+        {
+            color: black;
+        }
+    </style>
+</head>
+
+<body class="container" ng-app="starwars.application" ng-controller ="general.controller">
+    <h1 class="text-center">Star Wars Information</h1>
+    <h4 class="text-center">May The Force Be With You</h4>
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li ng-class="{'active': tabActive === 'planet'}">
+                <a href="#!/planet">Planet</a>
+            </li>
+            <li ng-class="{'active': tabActive === 'spaceship'}">
+                <a href="#!/spaceship">Spaceships</a>
+            </li>
+            <li ng-class="{'active': tabActive === 'people'}">
+                <a href="#!/people">Peoples</a>
+            </li>
+            <li ng-class="{'active': tabActive === 'film'}">
+                <a href="#!/film">Films</a>
+            </li>
+            <li ng-class="{'active': tabActive === 'species'}">
+                <a href="#!/species">Species</a>
+            </li>
+            <li ng-class="{'active': tabActive === 'vehicle'}">
+                <a href="#!/vehicle">Vehicles</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <ng-view></ng-view>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-route.min.js"></script>
+    <script src="../model/application.js"></script>
+    <script src="../controller/appRoute.js"></script>
+    <script src="../service/appService.js"></script>
+    <script src="../controller/appController.js"></script>
+<!--     <script src="../controller/planetController.js"></script>
+    <script src="../controller/spaceshipController.js"></script>
+ --></body>
+
+</html>

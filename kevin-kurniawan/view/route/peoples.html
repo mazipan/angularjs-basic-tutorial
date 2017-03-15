@@ -1,0 +1,28 @@
+<table class="table" >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Height</th>
+            <th>Mass</th>
+            <th>Hair Color</th>
+            <th>Skin Color</th>
+            <th>Eye Color</th>
+            <th>Birth Year</th>
+            <th>Gender</th>
+            <th>Homeworld</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="d in dataPeople.results track by d.name">
+            <td>{{d.name}}</td>
+            <td>{{d.height}}</td>
+            <td>{{d.mass}}</td>
+            <td>{{d.hair_color}}</td>
+            <td>{{d.skin_color}}</td>
+            <td>{{d.eye_color}}</td>
+            <td>{{d.birth_year}}</td>
+            <td>{{d.gender}}</td>
+            <td>{{d.homeworld}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -5,7 +5,7 @@ var jevonServices = angular.module('jevon.basic.service', []);
 jevonServices.factory('jevonShareObject', [jevonServicesFunction]);
 
 function jevonServicesFunction() {
-    var tabActive = "test";
+    var tabActive = "planets";
 
     return {
         setTabActive: function(name) {            

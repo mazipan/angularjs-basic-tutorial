@@ -1,0 +1,26 @@
+<div class="row">
+<h1 class="text-center">List Planets</h1>
+<div class="text-center">
+    <button ng-click="fetchDataplanets()" class="btn btn-primary">
+        <i class="glyphicon glyphicon-refresh"></i> Fetch Data
+    </button>
+    </div>
+</div>
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Diameter</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="d in data.results track by d.diameter">
+                <td>{{d.name}}</td>
+                <td>{{d.diameter}}</td>
+                <td>{{d.population}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

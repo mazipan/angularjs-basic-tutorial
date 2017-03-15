@@ -1,0 +1,16 @@
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Gender</th>
+				<th>Hair Color</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="d in data.results track by d.name">
+				<td>{{d.name}}</td>
+	            <td>{{d.gender}}</td>
+	            <td>{{d.hair_color}}</td>
+			</tr>
+		</tbody>
+	</table>

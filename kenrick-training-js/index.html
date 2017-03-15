@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular - Kenrick Kenton</title>
+</head>
+<style type="text/css">
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3bbfef;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+a:hover{
+	background-color: lightblue;
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+tr:hover {
+	background-color: #f5f5f5;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+</style>
+
+<body ng-app = "project-application" ng-controller = "project-ctrl">
+	<div class="nav-bar">
+		<ul>
+			<li ><a href="#!/people" ng-click="fetchDataPeople()">People</a></li>
+			<li ><a href="#!/planet" ng-click="fetchDataPlanet()">Planet</a></li>
+			<li ><a href="#!/spaceship" ng-click="fetchDataSpaceship()">Spaceship</a></li>
+			<li ><a href="#!/vehicle" ng-click="fetchDataVehicle()">Vehicle</a></li>
+		</ul>
+	</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-route.min.js"></script>
+    <script src="application.js"></script>
+    <script src="appController.js"></script>
+    <script src="appRoute.js"></script>
+    <!-- <script type="text/ng-template" id="people.html"> -->
+    
+	<div class="desc-bar">
+        <div ng-view></div>
+	</div>
+	
+</body>
+</html>

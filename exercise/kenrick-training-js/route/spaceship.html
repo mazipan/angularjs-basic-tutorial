@@ -1,0 +1,16 @@
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Model</th>
+				<th>Passengers</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="d in data.results track by d.name">
+				<td>{{d.name}}</td>
+	            <td>{{d.model}}</td>
+	            <td>{{d.passengers}}</td>
+			</tr>
+		</tbody>
+	</table>

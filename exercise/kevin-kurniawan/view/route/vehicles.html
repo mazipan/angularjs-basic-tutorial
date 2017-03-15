@@ -1,0 +1,32 @@
+<table class="table" >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Manufacturer</th>
+            <th>Cost (in Credit)</th>
+            <th>Length</th>
+            <th>Max Atmosperhing Speed</th>
+            <th>Crew</th>
+            <th>Passengers</th>
+            <th>Cargo Capacity</th>
+            <th>Consumables</th>
+            <th>Vehicle Class</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="d in dataVehicle.results track by d.name">
+            <td>{{d.name}}</td>
+            <td>{{d.model}}</td>
+            <td>{{d.manufacturer}}</td>
+            <td>{{d.cost_in_credits}}</td>
+            <td>{{d.length}}</td>
+            <td>{{d.max_atmosphering_speed}}</td>
+            <td>{{d.crew}}</td>
+            <td>{{d.passengers}}</td>
+            <td>{{d.cargo_capacity}}</td>
+            <td>{{d.consumables}}</td>
+            <td>{{d.vehicle_class}}</td>
+        </tr>
+    </tbody>
+</table>

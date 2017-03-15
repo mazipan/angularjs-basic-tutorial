@@ -1,0 +1,22 @@
+<table class="table" >
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Episode</th>
+            <th>Opening Crawl</th>
+            <th>Director</th>
+            <th>Producer</th>
+            <th>Release Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="d in dataFilm.results track by d.episode_id">
+            <td>{{d.title}}</td>
+            <td>{{d.episode_id}}</td>
+            <td>{{d.opening_crawl}}</td>
+            <td>{{d.director}}</td>
+            <td>{{d.producer}}</td>
+            <td>{{d.release_date}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,24 @@
+<div ng-controller="main.ctrl">
+	<table class="table" >
+	    <thead>
+	        <tr>
+	            <th>Name</th>
+	            <th>Model</th>
+	            <th>Crew</th>
+	            <th>Passengers</th>
+	            <th>Cargo Capacity</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="dt in data.results">
+	            <td>{{dt.name}}</td>
+	            <td>{{dt.model}}</td>
+	            <td>{{dt.crew}}</td>
+	            <td>{{dt.passengers}}</td>
+	            <td>{{dt.cargo_capacity}}</td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+
+

@@ -1,0 +1,24 @@
+<div ng-controller="main.ctrl">
+	<table class="table" >
+	    <thead>
+	        <tr>
+	            <th>Name</th>
+	            <th>Height</th>
+	            <th>Mass</th>
+	            <th>Gender</th>
+	            <th>Birth Year</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="dt in data.results">
+	            <td>{{dt.name}}</td>
+	            <td>{{dt.height}}</td>
+	            <td>{{dt.mass}}</td>
+	            <td>{{dt.gender}}</td>
+	            <td>{{dt.birth_year | date : 'yyyy-MMM-dd'}}</td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+
+

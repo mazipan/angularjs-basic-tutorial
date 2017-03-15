@@ -5,27 +5,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <base href="https://mazipan.github.io/angularjs-basic-tutorial/example4-routing/">
 </head>
 
-<body ng-app="irfan.basic.Application" ng-controller="irfan.ctrl" class="container">
-    <h1>Angular Routing Example</h1>
-    <a href="https://github.com/mazipan/angularjs-basic-tutorial">See source code</a>
+<body ng-app="hutomo.basic.Application" ng-controller="hutomo.ctrl" class="container text-center">
+    <h1>Angular Routing Example By Hutomo</h1>
     <br/>
+    <!-- <a href="https://github.com/mazipan/angularjs-basic-tutorial">See source code</a> -->
     <img src="https://raw.githubusercontent.com/mazipan/angularjs-basic-tutorial/master/angular.png"/>
+    <br/>
     <div class="row">
-        <ul class="nav navxx-tabs">
+        <ul class="nav nav-tabs" style="display: inline-block;float: none;vertical-align: top;margin-top:10px">
             <li ng-class="{'active': tabActive === 'red'}">
-                <a href="#!/red">Red</a>
+                <a href="#!/red">First</a>
             </li>
             <li ng-class="{'active': tabActive === 'green'}">
-                <a href="#!/green">Green</a>
+                <a href="#!/green">Second</a>
             </li>
             <li ng-class="{'active': tabActive === 'blue'}">
-                <a href="#!/blue">Blue</a>
+                <a href="#!/blue">Third</a>
             </li>
         </ul>
     </div>
+    <br/>
     <div class="row">
         <ng-view></ng-view>
     </div>
@@ -35,6 +36,11 @@
     <script src="AppController.js"></script>
     <script src="AppRoute.js"></script>
     <script src="AppService.js"></script>
+    <script src="FirstController.js"></script>
+    <script src="SecondController.js"></script>
+    <script src="ThirdController.js"></script>
+    <script src="ThirdControllerOther.js"></script>
+    <script src="ThirdService.js"></script>
 </body>
 
 </html>

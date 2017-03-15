@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <title></title>
+</head>
+<body ng-app="tommy.basic.Application" ng-controller="tommy.ctrl" class="container">
+    <center><h1>StarWars Data Viewer</h1></center>
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li ng-class="{'active': tabActive === 'spaceships'}">
+                    <a href="#!/spaceships">Spaceships</a>
+            </li>
+            <li ng-class="{'active': tabActive === 'planets'}">
+                <a href="#!/planets">Planets</a>
+            </li>
+            <li ng-class="{'active': tabActive === 'people'}">
+                <a href="#!/people">People</a>
+            </li>
+            <li ng-class="{'active': tabActive === 'vehicles'}">
+                <a href="#!/vehicles">Vehicles</a>
+            </li>
+            <li ng-class="{'active': tabActive === 'species'}">
+                <a href="#!/species">Species</a>
+            </li>
+        </ul>
+    </div>
+    
+    <ng-view></ng-view>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-route.min.js"></script>
+    <script src="Application.js"></script>
+    <script src="AppController.js"></script>
+    <script src="AppRoute.js"></script>
+    <script src="AppService.js"></script>
+    
+    <script type="text/ng-template" id="spaceships.html">
+        <div class="row">
+            <br>
+            <center>
+            <button ng-click="fetchDataSpaceships()" class="btn btn-primary">
+                <i class="glyphicon glyphicon-refresh"></i> Fetch Data
+            </button>
+            </center>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Manufacturer</th>
+                        <th>Length (m)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in data.results track by d.model">
+                        <td>{{d.name}}</td>
+                        <td>{{d.manufacturer}}</td>
+                        <td>{{d.length}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </script>
+    <script type="text/ng-template" id="planets.html">
+        <div class="row">
+            <br>
+            <center>
+            <button ng-click="fetchDataPlanets()" class="btn btn-primary">
+                <i class="glyphicon glyphicon-refresh"></i> Fetch Data
+            </button>
+            </center>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Rotation Period (h)</th>
+                        <th>Orbital Period (d)</th>
+                        <th>Diameter (km)</th>
+                        <th>Climate</th>
+                        <th>Gravity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in data.results track by d.terrain">
+                        <td>{{d.name}}</td>
+                        <td>{{d.rotation_period}}</td>
+                        <td>{{d.orbital_period}}</td>
+                        <td>{{d.diameter}}</td>
+                        <td>{{d.climate}}</td>
+                        <td>{{d.gravity}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </script>
+    <script type="text/ng-template" id="people.html">
+        <div class="row">
+            <br>
+            <center>
+            <button ng-click="fetchDataPeople()" class="btn btn-primary">
+                <i class="glyphicon glyphicon-refresh"></i> Fetch Data
+            </button>
+            </center>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Height (cm)</th>
+                        <th>Weight (kg)</th>
+                        <th>Birth Year</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in data.results track by d.created">
+                        <td>{{d.name}}</td>
+                        <td>{{d.height}}</td>
+                        <td>{{d.mass}}</td>
+                        <td>{{d.birth_year}}</td>
+                        <td>{{d.gender}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </script>
+    <script type="text/ng-template" id="vehicles.html">
+        <div class="row">
+            <br>
+            <center>
+            <button ng-click="fetchDataVehicles()" class="btn btn-primary">
+                <i class="glyphicon glyphicon-refresh"></i> Fetch Data
+            </button>
+            </center>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Model</th>
+                        <th>Length (m)</th>
+                        <th>Max Atmosphering Speed (m/s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in data.results track by d.model">
+                        <td>{{d.name}}</td>
+                        <td>{{d.model}}</td>
+                        <td>{{d.length}}</td>
+                        <td>{{d.max_atmosphering_speed}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </script>
+    <script type="text/ng-template" id="species.html">
+        <div class="row">
+            <br>
+            <center>
+            <button ng-click="fetchDataSpecies()" class="btn btn-primary">
+                <i class="glyphicon glyphicon-refresh"></i> Fetch Data
+            </button>
+            </center>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Classification</th>
+                        <th>Designation</th>
+                        <th>Average Height (cm)</th>
+                        <th>Average Lifespan (y)</th>
+                        <th>Language</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="d in data.results track by d.url">
+                        <td>{{d.name}}</td>
+                        <td>{{d.classification}}</td>
+                        <td>{{d.designation}}</td>
+                        <td>{{d.average_height}}</td>
+                        <td>{{d.average_lifespan}}</td>
+                        <td>{{d.language}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </script>
+</body>
+</html>

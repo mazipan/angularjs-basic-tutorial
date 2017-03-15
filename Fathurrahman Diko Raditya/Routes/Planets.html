@@ -1,0 +1,29 @@
+<div class="row">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Rotation Period (h)</th>
+            <th>Orbital Period (d)</th>
+            <th>Diameter (km)</th>
+            <th>Climate</th>
+            <th>Gravity</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="d in data.results track by d.terrain">
+            <td>{{d.name}}</td>
+            <td>{{d.rotation_period}}</td>
+            <td>{{d.orbital_period}}</td>
+            <td>{{d.diameter}}</td>
+            <td>{{d.climate}}</td>
+            <td>{{d.gravity}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <button ng-click="fetchDataPlanets()" class="btn btn-primary">
+        <i class="glyphicon glyphicon-refresh"></i> Fetch Data
+    </button>
+    <br>
+</div>

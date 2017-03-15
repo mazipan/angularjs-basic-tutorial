@@ -1,0 +1,23 @@
+<div ng-app="Application" ng-controller="cltr.App">
+		<!--kalo dipencet bakal ngejalanin fungsi buat ambil data-->
+	<button ng-click="fetchDataVehicle()" class="btn btn-primary">Get Data</button>
+</div>
+
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Model</th>
+					<th>Passenger</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="d in data.results track by d.model">
+					<td>{{d.name}}</td>
+					<td>{{d.model}}</td>
+					<td>{{d.passengers}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>

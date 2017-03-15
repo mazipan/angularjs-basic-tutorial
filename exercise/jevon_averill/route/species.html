@@ -1,0 +1,37 @@
+<div class="row">
+	<button ng-click="fetchSpeciesData()" class="btn btn-primary" style="margin-top: 2.5%; margin-bottom: 1.5%;">
+	    <i class="glyphicon glyphicon-refresh"></i> Fetch Species Data
+	</button>
+</div>
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Classification</th>
+                <th>Designation</th>
+                <th>Average Height</th>
+                <th>Skin Colors</th>
+                <th>Hair Colors</th>
+                <th>Eye Colors</th>
+                <th>Average Lifespan</th>
+                <th>Homeworld</th>
+                <th>Language</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="spd in speciesData.results track by spd.name">
+                <td>{{spd.name}}</td>
+                <td>{{spd.classification}}</td>
+                <td>{{spd.designation}}</td>
+                <td>{{spd.average_heights}}</td>
+                <td>{{spd.skin_colors}}</td>
+                <td>{{spd.hair_colors}}</td>
+                <td>{{spd.eye_colors}}</td>
+                <td>{{spd.average_lifespan}}</td>
+                <td>{{spd.homeworld}}</td>
+                <td>{{spd.language}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

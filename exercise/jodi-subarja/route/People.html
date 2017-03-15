@@ -1,0 +1,23 @@
+<div ng-app="Application" ng-controller="cltr.App">
+		<!--kalo dipencet bakal ngejalanin fungsi buat ambil data-->
+	<button ng-click="fetchDataPeople()" class="btn btn-primary">Get Data</button>
+</div>
+
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Height</th>
+					<th>Gender</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="d in data.results track by d.name">
+					<td>{{d.name}}</td>
+					<td>{{d.height}}</td>
+					<td>{{d.gender}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>

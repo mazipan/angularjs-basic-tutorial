@@ -10,11 +10,14 @@ jevonRoute.run(['$route', function($route)  {
 jevonRoute.config(['$routeProvider', function($routeProvider) {
     
     $routeProvider
+        // .when("/", {
+        //     redirectTo: 'test'
+        // })
+        // .when("/test", {
+        //     templateUrl : "route/test.html"
+        // })
         .when("/", {
-            redirectTo: 'test'
-        })
-        .when("/test", {
-            templateUrl : "route/test.html"
+            redirectTo: 'planets'
         })
         .when("/planets", {
             templateUrl : "route/planets.html",

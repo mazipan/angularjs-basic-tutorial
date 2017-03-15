@@ -1,0 +1,30 @@
+<table class="table" >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Classification</th>
+            <th>Designation</th>
+            <th>Average Height</th>
+            <th>Skin Colors</th>
+            <th>Hair Colors</th>
+            <th>Eye Colors</th>
+            <th>Average Lifespan</th>
+            <th>Homeworld</th>
+            <th>Language</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="d in dataSpecies.results track by d.name">
+            <td>{{d.name}}</td>
+            <td>{{d.classification}}</td>
+            <td>{{d.designation}}</td>
+            <td>{{d.average_height}}</td>
+            <td>{{d.skin_colors}}</td>
+            <td>{{d.hair_colors}}</td>
+            <td>{{d.eye_colors}}</td>
+            <td>{{d.average_lifespan}}</td>
+            <td>{{d.homeworld}}</td>
+            <td>{{d.language}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,15 +1,15 @@
 /**
  * Created by Jodi on 3/14/2017.
  */
-var cltrApp = angular.module('ControllerApp',[]);
+var cltrApp = angular.module('controllerApp',[]);
 
-cltrApp.controller('cltr.App',['$scope','$http',CtrlFunctionFirst,'shareObj']);
+cltrApp.controller('cltr.App',['$scope','$http','shareObj',CtrlFunctionFirst]);
 
 function CtrlFunctionFirst($scope,$http,shareObj) {
     $scope.fetchDataPeople = function () {
         $http.get("https://swapi.co/api/people/").then(
 	        function (response) {
-	        	console.log('response',response);
+	        	//console.log('response',response);
 	            $scope.data = response.data;
 	      	});
     	}

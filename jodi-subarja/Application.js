@@ -3,4 +3,4 @@
  */
 
 'use strict';
-angular.module('Application',['ControllerApp','serviceApp','routeApp']);
+angular.module('Application',['controllerApp','serviceApp','routeApp']);

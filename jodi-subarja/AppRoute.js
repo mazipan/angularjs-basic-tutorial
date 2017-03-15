@@ -25,8 +25,8 @@ routeFunc.controller("peopleCtrl", ['$scope', 'shareObj',
     }
 ]);
 
-routeFunc.controller("vehiclesCtrl", ['$scope', 'shareObj', 
+routeFunc.controller("vehicleCtrl", ['$scope', 'shareObj', 
     function ($scope, shareObj) {
-        shareObj.setTabActive('Vehicles');
+        shareObj.setTabActive('Vehicle');
     }
 ]);

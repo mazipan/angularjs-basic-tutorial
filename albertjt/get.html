@@ -1,0 +1,36 @@
+<br>
+<div class="col-xs-2 col-xs-offset-1">
+  <button class="btn btn-block btn-primary" ng-click="getData()">Posts</button>
+</div>
+<!-- <div class="col-xs-2">
+  <button class="btn btn-block btn-primary" ng-click="getData()">Comments</button>
+</div>
+<div class="col-xs-2">
+  <button class="btn btn-block btn-primary" ng-click="getData()">Albums</button>
+</div>
+<div class="col-xs-2">
+  <button class="btn btn-block btn-primary" ng-click="getData()">To Dos</button>
+</div>
+<div class="col-xs-2">
+  <button class="btn btn-block btn-primary" ng-click="getData()">Users</button>
+</div> -->
+<div class="clearfix"></div>
+<br>
+<div class="col-xs-offset-1 col-xs-10">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Body</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="d in data">
+          <td>{{d.id}}</td>
+          <td>{{d.title}}</td>
+          <td>{{d.body}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

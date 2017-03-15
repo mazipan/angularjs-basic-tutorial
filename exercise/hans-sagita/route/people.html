@@ -1,0 +1,26 @@
+<div class="row">
+<h1 class="text-center">List People</h1>
+<div class="text-center">
+    <button ng-click="fetchDatapeople()" class="btn btn-primary">
+        <i class="glyphicon glyphicon-refresh"></i> Fetch Data
+    </button>
+    </div>
+</div>
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Height</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="d in data.results track by d.height">
+                <td>{{d.name}}</td>
+                <td>{{d.height}}</td>
+                <td>{{d.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

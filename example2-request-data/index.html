@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="d in data.results track by d.episode_id">
+                <tr ng-repeat="d in data.results  track by d.episode_id">
                     <td>{{d.title}}</td>
                     <td>{{d.director}}</td>
                     <td>{{d.release_date | date : 'yyyy-MMM-dd'}}</td>

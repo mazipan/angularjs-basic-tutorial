@@ -1,0 +1,24 @@
+<div ng-controller="main.ctrl">
+	<table class="table" >
+	    <thead>
+	        <tr>
+	            <th>Name</th>
+	            <th>Classification</th>
+	            <th>Skin Colors</th>
+	            <th>Eye Colors</th>
+	            <th>Average Lifespan</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="dt in data.results">
+	            <td>{{dt.name}}</td>
+	            <td>{{dt.classification}}</td>
+	            <td>{{dt.skin_colors}}</td>
+	            <td>{{dt.eye_colors}}</td>
+	            <td>{{dt.average_lifespan}}</td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+
+

@@ -1,0 +1,22 @@
+<div>
+	<div class="row" ng-controller="third.ctrl">
+        <h2>Input Operasi Aritmatika</h2>
+        <input type="text" placeholder="firstname" class="form-control" ng-model="firstThirdName">
+        <br>
+        <input type="text" placeholder="lastname" class="form-control" ng-model="lastThirdName">
+        <br>
+        <button ng-click="syncData()" class="btn btn-primary">
+            <i class="glyphicon glyphicon-refresh"></i> Sync Data
+        </button>
+        <h3>Variable Pertama : {{firstThirdName}}</h3>
+        <h3>Variable Kedua  : {{lastThirdName}}</h3>
+        <h3>Input Yang Diterima  : {{fullThirdName}}</h3>
+    </div>
+    <div class="row" ng-controller="third.other.ctrl">
+        <h2>Operasi Aritmatika</h2>
+        <h3>Hasil Pembagian : {{firstThirdName}}</h3>
+        <h3>Hasil Pengurangan  : {{lastThirdName}}</h3>
+        <h3>Hasil Pengalian  : {{fullThirdName}}</h3>
+    </div>
+</div>
+

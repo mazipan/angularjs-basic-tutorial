@@ -1,0 +1,22 @@
+<div ng-controller="main.ctrl">
+	<table class="table" id="test" >
+	    <thead>
+	        <tr>
+	            <th>Title</th>
+	            <th>Director</th>
+	            <th>Released</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="dt in data.results">
+	            <td>{{dt.title}}</td>
+	            <td>{{dt.director}}</td>
+	            <td>{{dt.release_date | date : 'yyyy-MMM-dd'}}</td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+
+
+
+

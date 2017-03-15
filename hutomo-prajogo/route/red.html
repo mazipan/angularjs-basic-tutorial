@@ -1,0 +1,20 @@
+<div ng-controller="first.ctrl">
+	<div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Released</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in data.results track by d.episode_id">
+                    <td>{{d.title}}</td>
+                    <td>{{d.director}}</td>
+                    <td>{{d.release_date | date : 'yyyy-MMM-dd'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

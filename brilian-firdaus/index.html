@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="irfan.basic.Application" ng-controller="irfan.ctrl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<base href="https://mazipan.github.io/angularjs-basic-tutorial/example4-routng/">-->
+</head>
+
+<body class="container">
+<div class="row">
+    <ul class="nav nav-tabs">
+        <li ng-class="{'active': tabActive === 'planets'}">
+            <a href="#!/planets">Planets</a>
+        </li>
+        <li ng-class="{'active': tabActive === 'spaceships'}">
+            <a href="#!/spaceships">Spaceship</a>
+        </li>
+        <li ng-class="{'active': tabActive === 'vehicles'}">
+            <a href="#!/vehicles">Vehicles</a>
+        </li>
+    </ul>
+</div>
+<div class="row">
+    <ng-view></ng-view>
+</div>
+<div class="row">
+    <table class="table" ng-if="planetsData.results" >
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Climate</th>
+            <th>Diameter</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="d in planetsData.results track by d.name">
+            <td>{{d.name}}</td>
+            <td>{{d.climate}}</td>
+            <td>{{d.diameter}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table" ng-if="spaceshipsData.results" >
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Cargo Capacity</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="d in spaceshipsData.results track by d.name">
+            <td>{{d.name}}</td>
+            <td>{{d.model}}</td>
+            <td>{{d.cargo_capacity}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table" ng-if="vehiclesData.results" >
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Passengers</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="d in vehiclesData.results track by d.name">
+            <td>{{d.name}}</td>
+            <td>{{d.model}}</td>
+            <td>{{d.passengers}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-route.min.js"></script>
+<script src="Application.js"></script>
+<script src="AppController.js"></script>
+<script src="AppRoute.js"></script>
+<script src="AppService.js"></script>
+</body>
+
+</html>

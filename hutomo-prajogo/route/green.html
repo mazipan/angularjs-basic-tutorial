@@ -1,0 +1,15 @@
+<div ng-controller='second.ctrl'>
+	<div class="row">
+        <input type="text" class="form-control" placeholder="firstname" ng-model="firstName">
+        <br>
+        <input type="text" class="form-control" placeholder="lastname" ng-model="lastName">
+        <h1>Fullname Check: <span ng-bind="firstName"></span> <span ng-bind="lastName"></span></h1>
+        <br>
+        <button ng-click="seeFullName()" class="btn btn-primary">
+            <i class="glyphicon glyphicon-send"></i> See my Full Name
+        </button>
+        <br>
+        <h1>Fullname Final: <span ng-bind="fullNameF"></span></h1>
+    </div>
+</div>
+

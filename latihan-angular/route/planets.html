@@ -1,0 +1,24 @@
+<div ng-controller="main.ctrl">
+	<table class="table" >
+	    <thead>
+	        <tr>
+	            <th>Name</th>
+	            <th>Rotation Period</th>
+	            <th>Diameter</th>
+	            <th>Terrain</th>
+	            <th>Population</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="dt in data.results">
+	            <td>{{dt.name}}</td>
+	            <td>{{dt.rotation_period}}</td>
+	            <td>{{dt.diameter}}
+	            <td>{{dt.terrain}}</td>
+	            <td>{{dt.population}}</td></td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+
+

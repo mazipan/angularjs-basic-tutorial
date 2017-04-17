@@ -1,6 +1,13 @@
 # angularjs-basic-tutorial
 Angularjs v.1.x Basic Tutorial By Irfan Maulana
 
+
+[![License](https://img.shields.io/github/license/mazipan/angularjs-basic-tutorial.svg?maxAge=3600)](https://github.com/mazipan/angularjs-basic-tutorial) 
+[![Github Issue](https://img.shields.io/github/issues/mazipan/angularjs-basic-tutorial.svg?maxAge=3600)](https://github.com/mazipan/angularjs-basic-tutorial/issues) 
+[![GitHub Fork](https://img.shields.io/github/forks/mazipan/angularjs-basic-tutorial.svg?maxAge=3600)](https://github.com/mazipan/angularjs-basic-tutorial/network) 
+[![GitHub Star](https://img.shields.io/github/stars/mazipan/angularjs-basic-tutorial.svg?maxAge=3600)](https://github.com/mazipan/angularjs-basic-tutorial/stargazers) 
+[![GitHub Contributors](https://img.shields.io/github/contributors/mazipan/angularjs-basic-tutorial.svg?maxAge=3600)](https://github.com/mazipan/angularjs-basic-tutorial/network/members)
+
 ![AngularJS](https://raw.githubusercontent.com/mazipan/angularjs-basic-tutorial/master/angular.png)
 
 ## List of Tutorial
